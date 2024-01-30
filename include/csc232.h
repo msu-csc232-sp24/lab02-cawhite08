@@ -81,7 +81,16 @@ namespace csc232
             double side;
     };
     // TODO: 3.1 Provide an inline definition of the Circle class below
-
+    class Circle : public Shape {
+        public:
+            Circle() : radius{1.0} {}
+            double area() const {return M_PI * (radius * radius);}
+            double perimeter() const {2 * M_PI * radius;}
+            ~Circle() = default;
+        
+        private:
+            double radius;
+    };
     // DO NOT Modify anything below this line
 } // namespace csc232
 
