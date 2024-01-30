@@ -19,7 +19,7 @@
 #define EXECUTE_BLOCK FALSE
 
 #define FINISHED_PART_1 TRUE
-#define FINISHED_PART_2 FALSE
+#define FINISHED_PART_2 TRUE
 #define FINISHED_PART_3 FALSE
 
 #include <algorithm>
@@ -70,7 +70,16 @@ namespace csc232
     };
 
     // TODO: 2.1 Provide an inline definition of the Square class below
-
+    class Square : public Shape {
+        public:
+            Square() : side{1.0} {}
+            double perimeter() const {return side * 4;}
+            double area() const {return side * side;}
+            ~Square() = default;
+        
+        private:
+            double side;
+    };
     // TODO: 3.1 Provide an inline definition of the Circle class below
 
     // DO NOT Modify anything below this line
